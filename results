@@ -1,0 +1,6 @@
+Sample IPERF test on TCP with topology described in simplePerf.py
+With Cubic:
+	*** Results: ['143 Kbits/sec', '305 Kbits/sec']
+With BBR:
+	Results: ['8.65 Mbits/sec', '8.85 Mbits/sec']
+	

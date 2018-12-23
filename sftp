@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Just a wrapper to the sftp command, doing all the works for you
+
+MACHINE="mininet-1"
+PPATH=".vagrant/machines/$MACHINE"
+PROVIDER=`ls -1 $PPATH`
+PORT=22
+
+if [ ! -f $PPATH/$PROVIDER/port ]; then
+	PORT=`vagrant port | grep -e '=> [0-9]*' -oh|cut -c4-`
+	OUT="$PPATH/$PROVIDER/port"
+	echo $PORT | tee $OUT
+	echo "ssh-keygen -R '[127.0.0.1]:'$PORT"
+else
+	PORT=`cat $PPATH/$PROVIDER/port`
+fi
+
+
+sftp -i.vagrant/machines/mininet-1/virtualbox/private_key -P $PORT -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null -oLogLevel=FATAL vagrant@127.0.0.1 

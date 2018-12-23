@@ -1,0 +1,11 @@
+
+clone this repository
+vagrant up
+./sshX
+
+
+sudo -s
+cd DNCS_BBR
+./mininet_install.sh
+
+
