@@ -6,7 +6,7 @@
 MACHINE="mininet-1"
 PPATH=".vagrant/machines/$MACHINE"
 PROVIDER=`ls -1 $PPATH`
-PORT=22
+PORT=2200
 
 if [ ! -f $PPATH/$PROVIDER/port ]; then
 	PORT=`vagrant port | grep -e '=> [0-9]*' -oh|cut -c4-`
@@ -18,6 +18,6 @@ else
 fi
 
 
-echo ssh vagrant@127.0.0.1 -p $PORT -i $PPATH/$PROVIDER/private_key -X -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null\
+ssh vagrant@127.0.0.1 -p $PORT -i $PPATH/$PROVIDER/private_key -X -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null\
 	-oLogLevel=FATAL -oCompression=yes -oDSAAuthentication=yes -oIdentitiesOnly=yes\
 	$@

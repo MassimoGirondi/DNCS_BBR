@@ -16,27 +16,31 @@ def show_or_save(plt, name):
         plt.savefig(name, dpi=100)
 
 def convert_speed(x):
+    print("%s  --->  " % x, end='')
     factor=1
-    if "MB/s" in x:
+    if "KB/s" in x:
         factor=1024
-    elif "KB/s" in x:
+    elif "MB/s" in x:
         factor=1024**2
     elif "GB/s" in x:
         factor=1024**3
 
-    return float(x.split(" ")[0])*factor
+    x= float(x.split(" ")[0])*factor
 
+    print(x)
+    return x
 
 def convert_time(x):
-    print(x)
+    print("%s  --->  " % x, end='')
     if "m" in x and "s" in x: #Seconds and minutes
-        x= float(x.split("m")[0]) *60 + float(x.split("m ")[1][:-2])
+        x= float(x.split("m")[0]) *60 + float(x.split("m ")[1][:-1])
     elif "m" in x: #Only minutes
         x=float(x.split("m")[0])*60
     elif "s" in x: #Only seconds
-        x=float(x[:-2])
+        x=float(x[:-1])
     else: # No unit
         x=0
+    print(x)
     return x
 
 

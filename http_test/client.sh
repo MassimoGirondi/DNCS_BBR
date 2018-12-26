@@ -1,7 +1,7 @@
 #!/bin/bash
 WORK_DIR=`mktemp -d`
 cd $WORK_DIR
-OUT=`timeout 120 wget -e robots=off -r $@ -nv 2>&1 |tail -n2`
+OUT=`timeout 120 wget -e robots=off -r $@/web_page -nv 2>&1 |tail -n2`
 
 if [[ $OUT == *"Total"* ]];then
 	SPEED=`echo $OUT |sed -e "s/.*(//" -e "s/)//"`

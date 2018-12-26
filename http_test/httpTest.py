@@ -58,9 +58,9 @@ def perfTest(loss=0):
     server = net.getNodeByName('h1')
     h2 = net.getNodeByName('h2')
 
-    #server.cmd("./server.sh")
+    pid = server.cmd("./server.sh")
     #server.cmd("cd page && python -m SimpleHTTPServer 80 &")
-    server.cmd("python -m SimpleHTTPServer 80 page &")
+    #pid=server.cmd("python -m SimpleHTTPServer 80 page &")
     time.sleep(1)
 
     with open("http.dat", "a+") as f:
@@ -79,6 +79,8 @@ def perfTest(loss=0):
                 f.write( ("%i\t%s\t%s\n"
                        % (loss,protocol,results)))
         f.close()
+
+    server.cmd("kill -9 "+pid)
     net.stop()
 
 
