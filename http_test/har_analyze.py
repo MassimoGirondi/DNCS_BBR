@@ -10,7 +10,7 @@ import shutil
 
 har=json.load(open("page.har"))
 sizes=[ h['response']['content']['size'] for h in har['log']['entries']]
-print("Total size %ib (%.3f Mb) for %i requests" % (sum(sizes), sum(sizes)/1024.0**2,len(sizes)))
+print("Total size %ib (%.3f MB) for %i requests" % (sum(sizes), sum(sizes)/1024.0**2,len(sizes)))
 
 if os.path.exists("page"):
     shutil.rmtree("page")

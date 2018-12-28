@@ -8,5 +8,11 @@ sizes=[os.stat("page/"+f).st_size/1024 for f in files]
 plt.hist(sizes)
 plt.xlabel("Element size (KB)")
 plt.ylabel("Amount")
-plt.savefig("page_stat.pdf")
+#plt.title("Elements' size distribution in the test")
+#plt.savefig("page_stat.pdf")
+figure = plt.gcf() # get current figure
+figure.set_size_inches(10, 7)
+plt.savefig("page_stat.pdf", dpi=100, transparent=True)
+
+
 plt.show()

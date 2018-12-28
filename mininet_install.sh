@@ -50,4 +50,4 @@ apt-get install -y tmux nginx
 echo "daemon off;" >> /etc/nginx/nginx.conf
 service nginx stop
 rm /var/www/html/index.nginx-debian.html
-cp /home/vagrant/DNCS_BBR/http_test/page /var/www/html/web_page/
+#cp /home/vagrant/DNCS_BBR/http_test/page /var/www/html/web_page/

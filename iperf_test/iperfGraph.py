@@ -11,8 +11,8 @@ def show_or_save(plt, name):
         plt.show()
     else:
         figure = plt.gcf() # get current figure
-        figure.set_size_inches(8, 6)
-        plt.savefig(name, dpi=100)
+        figure.set_size_inches(10, 7)
+        plt.savefig(name, dpi=100, transparent=True)
 
 
 
@@ -28,7 +28,7 @@ for p in data['protocol'].unique():
     plt.plot(k,m,  label=p)
     
 plt.legend()
-plt.title("Iperf: 20 seconds test")
+#plt.title("Iperf: 20 seconds test")
 plt.xlabel("Loss (%)")
 plt.ylabel("Speed (Mbps)")
 show_or_save(plt,"plot.pdf")
@@ -47,7 +47,7 @@ for p in data['protocol'].unique():
     plt.errorbar(k,m,yerr=std,  label=p)
     
 plt.legend()
-plt.title("Iperf: 20 seconds test")
+#plt.title("Iperf: 20 seconds test")
 plt.xlabel("Loss (%)")
 plt.ylabel("Speed (Mbps)")
 #plt.yscale("log")

@@ -1,0 +1,434 @@
+0	reno	"7.22 MB/s"	"2.6s"
+
+0	cubic	"2.27 MB/s"	"4.2s"
+
+0	bbr	"10.3 MB/s"	"2.5s"
+
+1	reno	"1.91 MB/s"	"5.4s"
+
+1	cubic	"263 KB/s"	"15s"
+
+1	bbr	"2.48 MB/s"	"4.2s"
+
+2	reno	"422 KB/s"	"14s"
+
+2	cubic	"400 KB/s"	"10s"
+
+2	bbr	"1.92 MB/s"	"4.1s"
+
+3	reno	"233 KB/s"	"16s"
+
+3	cubic	"119 KB/s"	"30s"
+
+3	bbr	"404 KB/s"	"14s"
+
+5	reno	"132 KB/s"	"28s"
+
+5	cubic	"84.3 KB/s"	"39s"
+
+5	bbr	"358 KB/s"	"13s"
+
+7	reno	"44.6 KB/s"	"1m 15s"
+
+7	cubic	0	0
+
+7	bbr	"234 KB/s"	"20s"
+
+10	reno	0	0
+
+10	cubic	0	0
+
+10	bbr	"129 KB/s"	"34s"
+
+0	reno	"19.3 MB/s"	"2.1s"
+
+0	cubic	"23.7 MB/s"	"2.2s"
+
+0	bbr	"19.4 MB/s"	"2.0s"
+
+1	reno	"881 KB/s"	"5.8s"
+
+1	cubic	"808 KB/s"	"6.1s"
+
+1	bbr	"1.67 MB/s"	"4.0s"
+
+2	reno	"271 KB/s"	"16s"
+
+2	cubic	"309 KB/s"	"12s"
+
+2	bbr	"1.09 MB/s"	"8.1s"
+
+3	reno	"131 KB/s"	"28s"
+
+3	cubic	"134 KB/s"	"27s"
+
+3	bbr	"618 KB/s"	"10s"
+
+5	reno	"70.9 KB/s"	"48s"
+
+5	cubic	"76.0 KB/s"	"43s"
+
+5	bbr	"665 KB/s"	"8.9s"
+
+7	reno	"31.7 KB/s"	"1m 42s"
+
+7	cubic	"33.1 KB/s"	"1m 43s"
+
+7	bbr	"233 KB/s"	"25s"
+
+10	reno	0	0
+
+10	cubic	0	0
+
+10	bbr	"70.5 KB/s"	"1m 0s"
+
+0	reno	"19.2 MB/s"	"2.3s"
+
+0	cubic	"3.08 MB/s"	"3.0s"
+
+0	bbr	"14.8 MB/s"	"1.9s"
+
+1	reno	"637 KB/s"	"7.2s"
+
+1	cubic	"509 KB/s"	"8.6s"
+
+1	bbr	"1.84 MB/s"	"3.8s"
+
+2	reno	"215 KB/s"	"18s"
+
+2	cubic	"239 KB/s"	"15s"
+
+2	bbr	"2.25 MB/s"	"4.1s"
+
+3	reno	"185 KB/s"	"21s"
+
+3	cubic	"169 KB/s"	"22s"
+
+3	bbr	"1.02 MB/s"	"6.8s"
+
+5	reno	"77.0 KB/s"	"43s"
+
+5	cubic	"72.9 KB/s"	"48s"
+
+5	bbr	"533 KB/s"	"13s"
+
+0	reno	"15.6 MB/s"	"2.0s"
+
+0	cubic	"22.8 MB/s"	"1.8s"
+
+0	bbr	"23.7 MB/s"	"1.8s"
+
+1	reno	"522 KB/s"	"8.2s"
+
+1	cubic	"457 KB/s"	"11s"
+
+1	bbr	"1.26 MB/s"	"5.9s"
+
+2	reno	"387 KB/s"	"9.7s"
+
+2	cubic	"395 KB/s"	"10s"
+
+2	bbr	"1.91 MB/s"	"4.9s"
+
+3	reno	"191 KB/s"	"20s"
+
+3	cubic	"162 KB/s"	"22s"
+
+3	bbr	"816 KB/s"	"9.3s"
+
+5	reno	"133 KB/s"	"28s"
+
+5	cubic	"79.8 KB/s"	"43s"
+
+5	bbr	"790 KB/s"	"8.7s"
+
+7	reno	0	0
+
+7	cubic	"39.6 KB/s"	"1m 22s"
+
+7	bbr	"228 KB/s"	"19s"
+
+10	reno	0	0
+
+10	cubic	0	0
+
+10	bbr	"243 KB/s"	"23s"
+
+0	reno	"19.1 MB/s"	"1.9s"
+
+0	cubic	"22.7 MB/s"	"1.8s"
+
+0	bbr	"13.8 MB/s"	"1.9s"
+
+1	reno	"416 KB/s"	"11s"
+
+1	cubic	"371 KB/s"	"11s"
+
+1	bbr	"1.25 MB/s"	"6.3s"
+
+2	reno	"404 KB/s"	"9.9s"
+
+2	cubic	"437 KB/s"	"9.9s"
+
+2	bbr	"2.45 MB/s"	"3.7s"
+
+3	reno	"299 KB/s"	"15s"
+
+3	cubic	"255 KB/s"	"15s"
+
+3	bbr	"495 KB/s"	"9.1s"
+
+5	reno	"71.1 KB/s"	"48s"
+
+5	cubic	"70.3 KB/s"	"49s"
+
+5	bbr	"487 KB/s"	"9.5s"
+
+7	reno	"42.2 KB/s"	"1m 19s"
+
+0	reno	"2.41 MB/s"	"4.3s"
+
+0	cubic	"11.2 MB/s"	"2.3s"
+
+0	bbr	"17.8 MB/s"	"2.3s"
+
+1	reno	"562 KB/s"	"8.9s"
+
+1	cubic	"520 KB/s"	"8.5s"
+
+1	bbr	"11.0 MB/s"	"2.2s"
+
+2	reno	"303 KB/s"	"13s"
+
+2	cubic	"322 KB/s"	"12s"
+
+2	bbr	"2.15 MB/s"	"4.8s"
+
+3	reno	"184 KB/s"	"19s"
+
+3	cubic	"259 KB/s"	"15s"
+
+3	bbr	"818 KB/s"	"7.3s"
+
+5	reno	"74.5 KB/s"	"50s"
+
+5	cubic	"64.3 KB/s"	"51s"
+
+5	bbr	"328 KB/s"	"15s"
+
+7	reno	"34.5 KB/s"	"1m 36s"
+
+7	cubic	0	0
+
+7	bbr	"374 KB/s"	"12s"
+
+10	reno	0	0
+
+10	cubic	0	0
+
+10	bbr	"326 KB/s"	"17s"
+
+0	reno	"8.21 MB/s"	"2.4s"
+
+0	cubic	"9.52 MB/s"	"2.2s"
+
+0	bbr	"10.4 MB/s"	"2.2s"
+
+1	reno	"1.26 MB/s"	"4.8s"
+
+1	cubic	"516 KB/s"	"8.2s"
+
+1	bbr	"670 KB/s"	"8.3s"
+
+2	reno	"541 KB/s"	"8.2s"
+
+2	cubic	"269 KB/s"	"14s"
+
+2	bbr	"1.12 MB/s"	"5.6s"
+
+3	reno	"348 KB/s"	"12s"
+
+3	cubic	"184 KB/s"	"20s"
+
+3	bbr	"1.07 MB/s"	"7.2s"
+
+5	reno	"91.1 KB/s"	"38s"
+
+5	cubic	"102 KB/s"	"35s"
+
+5	bbr	"999 KB/s"	"7.5s"
+
+7	reno	"31.5 KB/s"	"1m 44s"
+
+7	cubic	"40.4 KB/s"	"1m 21s"
+
+7	bbr	"171 KB/s"	"26s"
+
+10	reno	0	0
+
+10	cubic	0	0
+
+10	bbr	"57.1 KB/s"	"1m 5s"
+
+0	reno	"15.1 MB/s"	"2.1s"
+
+0	cubic	"3.81 MB/s"	"2.4s"
+
+0	bbr	"16.6 MB/s"	"1.8s"
+
+1	reno	"637 KB/s"	"7.2s"
+
+1	cubic	"564 KB/s"	"8.6s"
+
+1	bbr	"3.22 MB/s"	"3.6s"
+
+2	reno	"373 KB/s"	"11s"
+
+2	cubic	"370 KB/s"	"10s"
+
+2	bbr	"1.97 MB/s"	"3.4s"
+
+3	reno	"230 KB/s"	"16s"
+
+3	cubic	"201 KB/s"	"18s"
+
+3	bbr	"2.18 MB/s"	"4.4s"
+
+5	reno	"144 KB/s"	"26s"
+
+5	cubic	"91.3 KB/s"	"36s"
+
+5	bbr	"883 KB/s"	"12s"
+
+7	reno	"55.9 KB/s"	"59s"
+
+7	cubic	"48.5 KB/s"	"1m 9s"
+
+7	bbr	"184 KB/s"	"27s"
+
+10	reno	0	0
+
+10	cubic	0	0
+
+10	bbr	"44.9 KB/s"	"1m 23s"
+
+0	reno	"25.1 MB/s"	"1.8s"
+
+0	cubic	"18.0 MB/s"	"1.8s"
+
+0	bbr	"15.1 MB/s"	"2.0s"
+
+1	reno	"546 KB/s"	"7.8s"
+
+1	cubic	"520 KB/s"	"7.9s"
+
+1	bbr	"3.45 MB/s"	"3.4s"
+
+2	reno	"264 KB/s"	"15s"
+
+2	cubic	"276 KB/s"	"14s"
+
+2	bbr	"1.53 MB/s"	"5.5s"
+
+3	reno	"231 KB/s"	"20s"
+
+3	cubic	"142 KB/s"	"25s"
+
+3	bbr	"917 KB/s"	"7.1s"
+
+5	reno	"103 KB/s"	"34s"
+
+5	cubic	"72.3 KB/s"	"47s"
+
+5	bbr	"772 KB/s"	"7.8s"
+
+7	reno	"44.6 KB/s"	"1m 13s"
+
+7	cubic	0	0
+
+7	bbr	"294 KB/s"	"15s"
+
+10	reno	0	0
+
+10	cubic	0	0
+
+10	bbr	"138 KB/s"	"33s"
+
+0	reno	"25.0 MB/s"	"1.8s"
+
+0	cubic	"18.2 MB/s"	"2.4s"
+
+0	bbr	"16.0 MB/s"	"2.0s"
+
+1	reno	"511 KB/s"	"8.9s"
+
+1	cubic	"477 KB/s"	"8.7s"
+
+1	bbr	"2.69 MB/s"	"4.5s"
+
+2	reno	"398 KB/s"	"11s"
+
+2	cubic	"384 KB/s"	"11s"
+
+2	bbr	"5.77 MB/s"	"2.7s"
+
+3	reno	"234 KB/s"	"17s"
+
+3	cubic	"186 KB/s"	"19s"
+
+3	bbr	"1.42 MB/s"	"4.3s"
+
+5	reno	"89.0 KB/s"	"40s"
+
+5	cubic	"79.3 KB/s"	"43s"
+
+5	bbr	"372 KB/s"	"13s"
+
+7	reno	"44.1 KB/s"	"1m 15s"
+
+7	cubic	"38.7 KB/s"	"1m 26s"
+
+7	bbr	"351 KB/s"	"15s"
+
+10	reno	0	0
+
+10	cubic	0	0
+
+10	bbr	"191 KB/s"	"25s"
+
+0	reno	"25.6 MB/s"	"2.1s"
+
+0	cubic	"21.8 MB/s"	"1.8s"
+
+0	bbr	"9.73 MB/s"	"2.3s"
+
+1	reno	"449 KB/s"	"9.7s"
+
+1	cubic	"348 KB/s"	"12s"
+
+1	bbr	"3.01 MB/s"	"3.2s"
+
+2	reno	"392 KB/s"	"10s"
+
+2	cubic	"328 KB/s"	"12s"
+
+2	bbr	"4.55 MB/s"	"4.3s"
+
+3	reno	"267 KB/s"	"16s"
+
+3	cubic	"255 KB/s"	"14s"
+
+3	bbr	"885 KB/s"	"6.7s"
+
+5	reno	"94.7 KB/s"	"51s"
+
+5	cubic	"61.3 KB/s"	"55s"
+
+5	bbr	"229 KB/s"	"20s"
+
+7	reno	"66.8 KB/s"	"51s"
+
+7	cubic	"43.2 KB/s"	"1m 17s"
+
+7	bbr	"461 KB/s"	"15s"
+
