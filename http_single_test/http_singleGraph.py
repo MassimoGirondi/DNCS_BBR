@@ -5,7 +5,7 @@ from matplotlib.ticker import ScalarFormatter
 from matplotlib.ticker import FormatStrFormatter
 
 SHOW=False
-title="Complex Web page download test - 120 seconds timeout"
+title="Single HTTP file download test - 120 seconds timeout"
 def show_or_save(plt, name):
     if SHOW:
         plt.show()
@@ -44,76 +44,76 @@ def convert_time(x):
 
 
 
+'''
+sizes=[]
+with open("field_list") as f:
+    sizes=f.read().split('\n')[:-1]
+'''
+sizes=['500K','1M','2M','5M','10M','100M']
+print(sizes)
 
+columns=['loss','protocol']+sizes
+#print(columns)
 
-data = pd.read_table("http.dat", sep="\t", names=['loss','protocol','speed', 'time'])
-data['speed']=pd.to_numeric(data['speed'].apply(convert_speed))
-data['time']=pd.to_numeric(data['time'].apply(convert_time))
+data = pd.read_table("http.dat", sep="\t", names=columns, index_col=False)
+for s in sizes:
+    print(s)
+    data[s]=pd.to_numeric(data[s].apply(convert_speed))
+    data[s]/=1024 #Convert to Kbps
 
+protocols=['reno','cubic', 'bbr']
 
+# Simple plots, side by side
+fig, axes = plt.subplots(ncols=int(len(sizes)/2), nrows=2, figsize=(1, 1), sharey='all')
 
-data['speed']/=1024 #Convert to Kbps
-
-
-
-
-#Simple plot
-for p in data['protocol'].unique():
-    d=data[data['protocol']==p].sort_values('loss', ascending = True)
-    m = d.groupby('loss')['speed'].mean()
-    k= d['loss'].unique()
-    plt.plot(k,m,  label=p)
+def plot(pos,d,size):
+    d_s=d[['loss','protocol', size]]
+    ls=d_s['loss'].unique()
     
-plt.legend()
-#plt.title(title)
-plt.xlabel("Loss (%)")
-plt.ylabel("Speed (Kbps)")
-show_or_save(plt,"plot.pdf")
-
-plt.yscale("log")
-show_or_save(plt,"plot_log.pdf")
-
-plt.clf()
-
-#Simple plot with markers for std deviation
-for p in data['protocol'].unique():
-    d=data[data['protocol']==p].sort_values('loss', ascending = True)
-    m = d.groupby('loss')['speed'].mean()
-    std=d.groupby('loss')['speed'].std()
-    k= d['loss'].unique()
-    plt.errorbar(k,m,yerr=std,  label=p)
-    
-plt.legend()
-#plt.title(title)
-plt.xlabel("Loss (%)")
-plt.ylabel("Speed (Kbps)")
-#plt.yscale("log")
-show_or_save(plt,"plot_std_markers.pdf")
-plt.clf()
-
-
-# Violin plots, side by side
-fig, axes = plt.subplots(nrows=1, ncols=3, figsize=(4, 4), sharey='all')
-
-def violin(pos,d,protocol):
-    d_p=d[d['protocol'] == protocol]
-    ls=d_p['loss'].unique()
-    v=[ d_p[d_p['loss'] == l]['speed'].tolist() for l in ls]
-    pos.violinplot(v,ls,showmeans=True)
-    pos.set_title(protocol)
-    pos.set_xlabel("Loss (%)")
+    for p in data['protocol'].unique():
+        d=data[data['protocol']==p].sort_values('loss', ascending = True)
+        m = d.groupby('loss')[size].mean()
+        k= d['loss'].unique()
+        pos.plot(k,m,  label=p)
+        
+    pos.set_title(size)
+    #pos.set_xlabel("Loss (%)")
     pos.set_ylabel("Speed (Kbps)")
 
+for i in range(len(sizes)):
+    size=sizes[i]
+    print(size)
+    plot(axes[i%2][i//2],data,size)
 
+show_or_save(plt,"sizes_plot.pdf")
 
-violin(axes[0],data,'bbr')
-violin(axes[1],data,'reno')
-violin(axes[2],data,'cubic')
-show_or_save(plt,"violinplot.pdf")
-
-for i in range(3):
+for i in range(len(sizes)):
     #axes[i].plot([0,50],[1,1], linestyle='--', dashes=(1,5))
-    axes[i].set_yscale("log")
-    axes[i].yaxis.set_major_formatter(FormatStrFormatter("%.1f"))
+    axes[i%2][i//2].set_yscale("log")
+    axes[i%2][i//2].yaxis.set_major_formatter(FormatStrFormatter("%.1f"))
 
-show_or_save(plt,"violinplot_log.pdf")
+show_or_save(plt,"sizes_plot_log.pdf")
+plt.clf()
+
+
+# BBR performances across the size
+data_bbr=data[data['protocol']=='bbr']
+
+for size in sizes:
+    d=data_bbr[['loss', size]].sort_values('loss', ascending = True)
+    ls=d['loss'].unique()
+    m=[ d[d['loss'] == l][size].mean() for l in ls]
+    print(ls)
+    print(m)
+    plt.plot(ls, m, label=size)
+    
+plt.legend()
+#plt.title(title)
+plt.xlabel("Loss (%)")
+plt.ylabel("Speed (Kbps)")
+show_or_save(plt,"size_bbr_plot.pdf")
+
+plt.yscale("log")
+show_or_save(plt,"size_bbr_plot_log.pdf")
+
+plt.clf()

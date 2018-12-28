@@ -27,15 +27,18 @@
 %  \tableofcontents[hideallsubsections]
 %\end{frame}
 
-\begin{frame}{TCP BBR}
+\begin{frame}{TCP BBR (from English Wikipedia)}
 	\begin{itemize}
-		\item Developed by Google
+		\item \textbf{B}ottleneck \textbf{B}andwidth and \textbf{R}ound-trip propagation time
+		\item Developed by Google in 2016
 		\item OpenSource
-		\item blah blah blah
+		\item For YouTube, BBR yielded an average of 4\% higher network throughput (up to 14\%)
+		\item Available in Linux Kernel from version 4.9
+		\item Seems not too fair to non-BBR streams (cit. Geoff Huston)
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Test setup}
+\begin{frame}{Test environment}
 	\begin{itemize}
 		\item Mininet 2.3 on Debian 9
 		\item Virtual machine running on VirtualBox
@@ -48,7 +51,7 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}{20 seconds Iperf test: description}
+\begin{frame}{20 seconds Iperf test: description [1/3]}
 	\begin{itemize}
 		\item \texttt{h1} as server
 		\item \texttt{h2} as client
@@ -60,20 +63,20 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{20 seconds Iperf test: results [1/2]}
+\begin{frame}{20 seconds Iperf test: speed (log) [2/3]}
   \begin{figure}
 	  \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{../iperf_test/plot_log.pdf}
   \end{figure}
 \end{frame}
 
-\begin{frame}{20 seconds Iperf test: results [2/2]}
+\begin{frame}{20 seconds Iperf test: speed distribution [3/3]}
   \begin{figure}
 	  \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{../iperf_test/violinplot.pdf}
   \end{figure}
 \end{frame}
 
 
-\begin{frame}{Complex web page simulation: description}
+\begin{frame}{Complex web page simulation: description [1/4]}
 	\begin{itemize}
 		\item \texttt{h1} as server
 		\item \texttt{h2} as client
@@ -86,7 +89,7 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Complex web page simulation: page structure}
+\begin{frame}{Complex web page simulation: page structure [2/4]}
   \begin{figure}
 	  \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{../http_test/page_stat.pdf}
   \end{figure}
@@ -95,13 +98,13 @@
 
 
 
-\begin{frame}{Complex web page simulation: results [1/2]}
+\begin{frame}{Complex web page simulation: speed (log) [4/4]}
   \begin{figure}
 	  \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{../http_test/plot_log.pdf}
   \end{figure}
 \end{frame}
 
-\begin{frame}{Complex web page simulation: results [2/2]}
+\begin{frame}{Complex web page simulation: speed distribution [4/4]}
   \begin{figure}
 	  \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{../http_test/violinplot.pdf}
   \end{figure}
@@ -109,7 +112,32 @@
 
 
 
-\begin{frame}{Topology}
+
+\begin{frame}{Single file download: description}
+		\begin{itemize}
+			\item \texttt{h1} as server
+			\item \texttt{h2} as client
+			\item As before, \texttt{nginx} as server
+			\item Simple \texttt{wget} as client, 120 seconds timeout
+			\item 500KB, 1MB, 2MB, 5MB, 10MB and 100MB files
+			\item Random content in files
+		\end{itemize}
+\end{frame}
+
+\begin{frame}{Single file download: speed for every size and protocol [1/2]}
+  \begin{figure}
+	  \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{../http_single_test/sizes_plot.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Single file download: BBR performaces [2/2]}
+  \begin{figure}
+	  \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{../http_single_test/size_bbr_plot.pdf}
+  \end{figure}
+\end{frame}
+
+
+\begin{frame}{Slide}
 \end{frame}
 
 
