@@ -43,6 +43,8 @@
 		\item Mininet 2.3 on Debian 9
 		\item Virtual machine running on VirtualBox
 		\item Provisioned through Vagrant 
+		\item Switched star network, Gigabit links with 5ms delay
+		\item Congestion protocol changes for every machine: kernel is shared
 	\end{itemize}
 \end{frame}
 \begin{frame}{Topology}
@@ -53,6 +55,7 @@
 
 \begin{frame}{20 seconds Iperf test: description [1/3]}
 	\begin{itemize}
+		\item Variable loss rate on the server's link, then variable delay
 		\item \texttt{h1} as server
 		\item \texttt{h2} as client
 		\item Client options: \texttt{-f k -c IP -t 20 }
@@ -63,21 +66,36 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{20 seconds Iperf test: speed (log) [2/3]}
+\begin{frame}{20 seconds Iperf test: speed vs loss (log) [2/5]}
   \begin{figure}
 	  \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{../iperf_test/plot_log.pdf}
   \end{figure}
 \end{frame}
 
-\begin{frame}{20 seconds Iperf test: speed distribution [3/3]}
+\begin{frame}{20 seconds Iperf test: speed vs loss distribution [3/5]}
   \begin{figure}
 	  \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{../iperf_test/violinplot.pdf}
   \end{figure}
 \end{frame}
 
 
+\begin{frame}{20 seconds Iperf test: speed vs delay (log) [4/5]}
+  \begin{figure}
+	  \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{../iperf_test_delay/plot_log.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{20 seconds Iperf test: speed vs delay distribution [5/5]}
+  \begin{figure}
+	  \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{../iperf_test_delay/violinplot.pdf}
+  \end{figure}
+\end{frame}
+
+
 \begin{frame}{Complex web page simulation: description [1/4]}
 	\begin{itemize}
+
+		\item Variable loss rate on the server's link
 		\item \texttt{h1} as server
 		\item \texttt{h2} as client
 		\item \texttt{nginx} as server since Python's \texttt{SimpleHTTPServer} is too slow
@@ -115,6 +133,7 @@
 
 \begin{frame}{Single file download: description}
 		\begin{itemize}
+			\item Variable loss rate on the server's link
 			\item \texttt{h1} as server
 			\item \texttt{h2} as client
 			\item As before, \texttt{nginx} as server
@@ -137,7 +156,13 @@
 \end{frame}
 
 
-\begin{frame}{Slide}
+\begin{frame}{Conclusions}
+	\begin{itemize}
+		\item Tests showed the better performances of BBR over Cubic and Reno
+		\item BBR achieves better speed both across loss and delays
+		\item Congestion Window cannot be inspected without rebuilding the kernel (to get \texttt{tcp\_probe})
+		\item Fairness to other protocols needs to be investigated using multiple machine (the kernel is shared)
+	\end{itemize}
 \end{frame}
 
 

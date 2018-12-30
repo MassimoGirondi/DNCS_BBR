@@ -85,6 +85,8 @@ for i in range(len(sizes)):
     print(size)
     plot(axes[i%2][i//2],data,size)
 
+legend = plt.legend(loc=1)
+#fig.legend( lines, labels, loc = (0.5, 0), ncol=5 )
 show_or_save(plt,"sizes_plot.pdf")
 
 for i in range(len(sizes)):
