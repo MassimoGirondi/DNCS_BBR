@@ -44,6 +44,7 @@
 		\item Virtual machine running on VirtualBox
 		\item Provisioned through Vagrant 
 		\item Switched star network, Gigabit links with 5ms delay
+        \item 4 machines, only two used for tests
 		\item Congestion protocol changes for every machine: kernel is shared
 	\end{itemize}
 \end{frame}
@@ -161,7 +162,8 @@
 		\item Tests showed the better performances of BBR over Cubic and Reno
 		\item BBR achieves better speed both across loss and delays
 		\item Congestion Window cannot be inspected without rebuilding the kernel (to get \texttt{tcp\_probe})
-		\item Fairness to other protocols needs to be investigated using multiple machine (the kernel is shared)
+		\item Fairness to other protocols needs to be investigated using multiple machines (the kernel is shared)
+        \item All the code is available on \url{github.com/MassimoGirondi/DNCS_BBR}.
 	\end{itemize}
 \end{frame}
 
