@@ -3,3 +3,4 @@ http_test/page.har
 http_single_test/serving_files
 http_single_files/field_list
 .vagrant
+*/*.pcap

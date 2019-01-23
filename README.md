@@ -10,7 +10,8 @@ Communication System, yield by Prof. Granelli at the University of Trento.
 * Install Vagrant
 * Clone this repository
 * Provision the machine with `vagrant up`
-* Connect to the machine through `vagrant ssh` and run the tests (one for each folder).
+* Connect to the machine through `vagrant ssh` and install Mininet through the [`install_mininet.sh`](install_mininet.sh) script
+* `cd` into any folder and run the tests.
 * If you want some plots, tun the Python scripts in each folder after the tests
 
 ## Outcomes

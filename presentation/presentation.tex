@@ -157,6 +157,31 @@
 \end{frame}
 
 
+\begin{frame}{New Reno faster than Cubic!? [1/2]}
+	From the previous tests, it appears that New Reno is faster than Cubic in some cases.
+	I run some test on a real network, just to verify.
+	\begin{itemize}
+		\item 1 Gbit links, adequate hardware
+		\item less than 1 ms ping time
+		\item Debian with 4.18 kernel on same machines
+		\item Overall, New Reno appeared up to 5 Mbps faster than Cubic
+		\item Limited tests and environment variables: longer tests should be performed
+		\item Of course, it can depend by specific version or machine's characteristics
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{New Reno faster than Cubic!? [2/2]}
+\begin{table}[]
+\begin{tabular}{l|l|l}
+\textbf{Condition} & \textbf{New Reno} & \textbf{Cubic} \\ \hline
+No delay, no loss  & 947               & 942            \\
+100 ms delay       & 201               & 196            \\
+5\% loss           & 944               & 942            \\
+10\% loss          & 943               & 913           
+\end{tabular}
+\end{table}
+\end{frame}
+
 \begin{frame}{Conclusions}
 	\begin{itemize}
 		\item Tests showed the better performances of BBR over Cubic and Reno
