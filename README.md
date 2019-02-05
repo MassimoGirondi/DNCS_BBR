@@ -7,12 +7,12 @@ This work has been done as part of the exam for the course Design of Networks an
 Communication System, yield by Prof. Granelli at the University of Trento.
 
 ## How to use
-* Install Vagrant
+* Install [Vagrant](https://www.vagrantup.com/downloads.html) and [VirtualBox](https://www.virtualbox.org/wiki/Downloads) on your machine
 * Clone this repository
 * Provision the machine with `vagrant up`
 * Connect to the machine through `vagrant ssh` and install Mininet through the [`install_mininet.sh`](install_mininet.sh) script
 * `cd` into any folder and run the tests.
-* If you want some plots, tun the Python scripts in each folder after the tests
+* If you want some plots, run the Python scripts in each folder after the tests
 
 ## Outcomes
 
