@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.3)  23 JAN 2019 21:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.3)  5 FEB 2019 17:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1466,7 +1466,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
  ) 
 Here is how much of TeX's memory you used:
  20592 strings out of 494798
- 407864 string characters out of 6177669
+ 407866 string characters out of 6177669
  465217 words of memory out of 5000000
  23409 multiletter control sequences out of 15000+600000
  12052 words of font info for 44 fonts, out of 8000000 for 9000
@@ -1477,7 +1477,7 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on presentation.pdf (19 pages, 348176 bytes).
+Output written on presentation.pdf (19 pages, 348106 bytes).
 PDF statistics:
  456 PDF objects out of 1000 (max. 8388607)
  39 named destinations out of 1000 (max. 500000)
